@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url('fonts/LaBelleAurore-Regular.woff2') format('woff2');
+
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+body {
+  background: rgb(26, 26, 26);
+  position: relative;
+}
+
+/* New Stacking Context with Fixed */
+.side-nav {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* To hide the sub-nav */
+.wrapper {
+  position: absolute;
+  background: rgb(17, 17, 17);
+  height: 100%;
+  width: 75px;
+  box-shadow: 0px 0px 60px rgb(0, 195, 255);
+  justify-content: center;
+  transition-duration: 500ms;
+}
+
+/* loading screen animation */
+.loader-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgb(26, 26, 26);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}
+
+/* loading screen animation */
+
+
+.espace {
+  height: 35%;
+}
+
+.nav-bloc {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border-bottom: 1px solid #f2f2f21e;
+  transition-duration: 350ms;
+}
+
+
+.nav-bloc:hover {
+  background: rgb(24, 24, 24);
+
+}
+
+
+
+.nav-bloc svg {
+  color: #f2f2f2;
+  width: 25px;
+  fill: #f2f2f2;
+  opacity: 0.8;
+  transition: 0.3s ease-in;
+}
+
+svg:hover {
+  color: rgb(0, 195, 255);
+  opacity: 1;
+}
+
+
+.sub-nav {
+  padding: 0px;
+  width: 200px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333;
+  z-index: -1;
+  color: white;
+}
+
+.sub-nav ul {
+  list-style-type: none;
+}
+
+.sub-nav li {
+  padding: 15px 20px;
+}
+
+
+.sub-nav li a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.main-content {
+  color: #f3f3f3; 
+  max-width: 70%;
+  height: 0%;
+}
+
+
+.text { /* On édite les propiétés du texte ( contenu des paragraphes)*/
+  line-height: 1;
+  font-family:Open Sans Light;
+  color: rgb(255, 255, 255);  
+  font-size: 17px;
+  padding-left: 5px;
+  font-style: italic;
+  transition-duration: 350ms;
+  transition-property: font-size;
+}
+.text:hover {
+  font-size:17px;
+  
+}
+
+h1 {
+  /* ici on modifie juste les titres de chaque page en gros*/
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 70px;
+  padding: 2%;
+  color: rgb(0, 195, 255);
+  width: 650px;
+  transition-property: font-size, transform;
+  transition-duration: 350ms;
+  opacity: 0.9;
+}
+
+
+h1:hover {
+  /* Les titres de chaque page grossissent quand on passe la souris dessus*/
+  font-size: 80px;
+  opacity: 1;
+  transform: translateX(30px);
+}
+
+
+/* STYLE DES BALISES*/
+
+p{
+  font-family: 'La Belle Aurore';
+  font-size: 25px;
+  color: rgb(94, 94, 94);
+  line-height: 1;
+  transition-duration: 350ms;
+  transition-property: font-size;
+}
+
+p:hover {
+  font-size: 30px;
+}
+
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 130px;
+  padding-top: 1%;
+  max-width: 60%;
+}
+
+
+
+/*FIN DE STYLE BALISE*/
+
+
+
+@keyframes transitionOpacity {
+
+  /* transition d'opacité début de page */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
