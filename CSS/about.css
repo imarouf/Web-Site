@@ -1,5 +1,67 @@
-.main-content{
-    padding: 15%;
+.main-content {
+    display: block;
+    margin: 5%;
+    padding: 3%;
+    width: 35%;
+    height: 82%;
+    background-color: rgb(37, 37, 37);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.582);
+}
+
+.box {
+    margin-left: 130px;
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    width: 100%;
+}
+
+.laptop {
+    border-bottom: 2px solid white;
+}
+
+
+.subtitle {
+    margin-top: 2%;
+}
+
+p{
+    line-height: 1.5;
+}
+
+.text {
+    line-height: 1.5;
+    padding: 2%;
+}
+
+
+.image {
+
+    display: block;
+    width: 35%;
+    margin: 5%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.582);
 
 }
 
+@media screen and (max-width: 1280px)
+{
+    .box {
+        flex-direction: column;
+    }
+
+    .main-content{
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 10px;
+
+
+    }
+
+    .image {
+        width: 100%;
+        margin: 0;
+    }
+}
